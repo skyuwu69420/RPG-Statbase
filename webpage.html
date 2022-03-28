@@ -1,0 +1,60 @@
+<HTML>
+    <head>
+        <title> rpgstatbase </title>
+    </head>
+
+    <body>
+        
+        <canvas id=canvas width=300 height=300 style="background-color: white;"> </canvas>
+        
+
+        <script>
+        var ctx = canvas.getContext("2d");                  //drawing context
+        var mouseclick = false                              //if mouse is being clicked, t/f
+
+        
+        
+        function resize_canvas (){                          //resizes the canvas to fit the window
+            canvas = document.getElementById("canvas");
+            if (canvas.width  != document.body.clientWidth)
+            {
+                canvas.width  = document.body.clientWidth;
+            }
+
+            if (canvas.height != document.body.clientHeight)
+            {
+                canvas.height = document.body.clientHeight;
+            }
+        }
+        
+        resize_canvas;
+        
+        
+        var pc1 = prompt("Character 1:");
+        var pc2 = prompt("Character 2:");
+        var pc3 = prompt("Character 3:");          //pc names
+        var pc4 = prompt("Character 4:");
+        var pc5 = prompt("Character 5:");
+        
+        
+        ctx.font="20px Arial";
+        ctx.fillText("PCs:", 10, 20);
+        ctx.font="15px Arial";
+        ctx.fillText("- " + (pc1), 10, 40)
+        ctx.fillText("- " + (pc2), 10, 60)
+        ctx.fillText("- " + (pc3), 10, 80)              //prints character names
+        ctx.fillText("- " + (pc4), 10, 100)
+        ctx.fillText("- " + (pc5), 10, 120)
+        
+        ctx.fillStyle=("black")
+        ctx.fillRect(10, 140, 120, 40)
+        ctx.fillStyle=('white')
+        ctx.fillText("StatFilters", 30, 165)
+        
+        
+        canvas.addEventListener("mousedown", clickHandler); 
+
+        </script>
+
+    </body>
+</html> 
