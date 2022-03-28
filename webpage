@@ -1,0 +1,55 @@
+<HTML>
+    <head>
+        <title> rpgstatbase </title>
+    </head>
+
+    <body>
+        
+        <canvas id=canvas width=300 height=300 style="background-color: white;"> </canvas>
+        
+
+        <script>
+        var ctx = canvas.getContext("2d");                  //drawing context
+        var fps = 40;                                       //frames per second, use as variable, change here
+
+        
+
+            
+            
+
+        var pc1 = "Varis";
+        var pc2 = "Warryn";
+        var pc3 = "Argsil";          //pc names
+        var pc4 = "Frikah";
+        var pc5 = "null";
+        
+        
+        function resize_canvas (){                          //resizes the canvas to fit the window
+            canvas = document.getElementById("canvas");
+            if (canvas.width  != document.body.clientWidth)
+            {
+                canvas.width  = document.body.clientWidth;
+            }
+
+            if (canvas.height != document.body.clientHeight)
+            {
+                canvas.height = document.body.clientHeight;
+            }
+        }
+        
+        resize_canvas;
+        
+        ctx.font="20px Arial";
+        ctx.fillText("PCs:", 10, 20);
+        ctx.font="15px Arial";
+        ctx.fillText("-" + (pc1), 10, 40)
+        ctx.fillText("-" + (pc2), 10, 60)
+        ctx.fillText("-" + (pc3), 10, 80)
+        ctx.fillText("-" + (pc4), 10, 100)
+        ctx.fillText("-" + (pc5), 10, 120)
+        
+
+        </script>
+
+    </body>
+</html> 
