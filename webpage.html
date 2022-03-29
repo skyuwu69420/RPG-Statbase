@@ -45,6 +45,7 @@
                 
         }
         </script>
+        </head>
 
     <body>
         
@@ -69,55 +70,54 @@
             }
         }
         
-        
-        function MyKeyUpHandler (MyEvent) { 
-            if (MyEvent.keyCode == 37 || MyEvent.keyCode == 39) {hero.velocity_x= 0}; // not left or right
-            if (MyEvent.keyCode == 38 || MyEvent.keyCode == 40) {hero.velocity_y= 0}; // not up or down
-            }
-            
-        function MyKeyDownHandler (MyEvent) { 
-            if (MyEvent.keyCode == 49) {boom bam bap badababop pow};
-            if (MyEvent.keyCode == 38) {hero.velocity_y=  -Quickness};  // up
-            if (MyEvent.keyCode == 39) {hero.velocity_x=   Quickness};  // right
-            if (MyEvent.keyCode == 40)  // down
-            MyEvent.preventDefault();
-            
-        }
-        
-        
-
-        
-        
         resize_canvas ();
         
+        var acro1= ("Player1 Acro. Modifier");
+        var acro2= ("Player2 Acro. Modifier");
+        var acro3= ("Player3 Acro. Modifier");           //acrobatics modifiers + p. or np.
+        var acro4= ("Player4 Acro. Modifier");
+        var acro5= ("Player5 Acro. Modifier");
         
+        var anim1= ("Player1 Anim. Modifier");
+        var anim2= ("Player2 Anim. Modifier");
+        var anim3= ("Player3 Anim. Modifier");         //animal handling modifiers + p. or np.
+        var anim4= ("Player4 Anim. Modifier");
+        var anim5= ("Player5 Anim. Modifier");
         
+        var pc1= ("Character 1");
+        var pc2= ("Character 2");
+        var pc3= ("Character 3");          //pc names
+        var pc4= ("Character 4");
+        var pc5= ("Character 5");
         
-                
-        var players= [pc1, pc2, pc3, pc4, pc5];
+        var hp1= ("Player1 MaxHP");
+        var hp2= ("Player2 MaxHP");
+        var hp3= ("Player3 MaxHP");        //pc maxhp
+        var hp4= ("Player4 MaxHP");
+        var hp5= ("Player5 MaxHP");
         
-        var pc1 = ("Character 1");
-        var pc2 = ("Character 2");
-        var pc3 = ("Character 3");          //pc names
-        var pc4 = ("Character 4");
-        var pc5 = ("Character 5");
+        var ac1= ("Player1 AC");
+        var ac2= ("Player2 AC");
+        var ac3= ("Player3 AC");           //pc ac
+        var ac4= ("Player4 AC");
+        var ac5= ("Player5 AC");
         
-        ctx.font="30px Arial";
-        ctx.fillText("Welcome to RPG Statbase", 300, 40);
+        var rnc1= ("Player1 R&C");
+        var rnc2= ("Player2 R&C");
+        var rnc3= ("Player3 R&C");        //pc race and class
+        var rnc4= ("Player4 R&C");
+        var rnc5= ("Player5 R&C");
+        
+        ctx.font="25px Arial";
+        ctx.fillText("Welcome to RPG Statbase", 300, 20);
         ctx.font="20px Arial";
         ctx.fillText("PCs:", 10, 20);
         ctx.font="15px Arial";
-        ctx.fillText("- " + (pc1), 10, 40)
-        ctx.fillText("- " + (pc2), 10, 60)
-        ctx.fillText("- " + (pc3), 10, 80)              //prints character names
-        ctx.fillText("- " + (pc4), 10, 100)
-        ctx.fillText("- " + (pc5), 10, 120)
-        
-         addEventListener("keydown", MyKeyDownHandler);           // listen for keystrokes  
-         addEventListener("keyup", MyKeyUpHandler);               // listen for keys released
-        
-        
-    
+        ctx.fillText("1. " + (pc1) + " - HP: " + hp1 + " - AC: " + ac1 + ", " + rnc1, 10, 40)
+        ctx.fillText("2. " + (pc2) + " - HP: " + hp2 + " - AC: " + ac2 + ", " + rnc2, 10, 60)
+        ctx.fillText("3. " + (pc3) + " - HP: " + hp3 + " - AC: " + ac3 + ", " + rnc3, 10, 80)              //prints character names + stats
+        ctx.fillText("4. " + (pc4) + " - HP: " + hp4 + " - AC: " + ac4 + ", " + rnc4, 10, 100)
+        ctx.fillText("5. " + (pc5) + " - HP: " + hp5 + " - AC: " + ac5 + ", " + rnc5, 10, 120)
         </script>
     </body>
 </html> 
